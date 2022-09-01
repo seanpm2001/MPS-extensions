@@ -15078,6 +15078,74 @@
     </node>
     <node concept="2G$12M" id="GuygFg7$fH" role="3989C9">
       <property role="TrG5h" value="mps-modelmergerTest" />
+      <node concept="1E1JtD" id="7T18c7FoROA" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="de.itemis.model.merge.simple.demo.annotated" />
+        <property role="3LESm3" value="c527d4ce-1a24-433b-b1ec-929a89de103a" />
+        <node concept="398BVA" id="7T18c7FoRSW" role="3LF7KH">
+          <ref role="398BVh" node="PE3B26neqW" resolve="extensions.code" />
+          <node concept="2Ry0Ak" id="7T18c7FoRT2" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="7T18c7FoRT7" role="2Ry0An">
+              <property role="2Ry0Am" value="de.itemis.model.merge.simple.demo.annotated" />
+              <node concept="2Ry0Ak" id="7T18c7FoRTc" role="2Ry0An">
+                <property role="2Ry0Am" value="de.itemis.model.merge.simple.demo.annotated.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="7T18c7FoRX$" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="7T18c7FoRX_" role="1HemKq">
+            <node concept="398BVA" id="7T18c7FoRXm" role="3LXTmr">
+              <ref role="398BVh" node="PE3B26neqW" resolve="extensions.code" />
+              <node concept="2Ry0Ak" id="7T18c7FoRXn" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="7T18c7FoRXo" role="2Ry0An">
+                  <property role="2Ry0Am" value="de.itemis.model.merge.simple.demo.annotated" />
+                  <node concept="2Ry0Ak" id="7T18c7FoRXp" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="7T18c7FoRXA" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="1yeLz9" id="7T18c7FoRXB" role="1TViLv">
+          <property role="TrG5h" value="de.itemis.model.merge.simple.demo.annotated" />
+          <property role="3LESm3" value="b2799476-be70-41c7-bdec-53f596226b74" />
+          <node concept="1BupzO" id="7T18c7FoRXT" role="3bR31x">
+            <property role="3ZfqAx" value="generator/templates" />
+            <property role="1Hdu6h" value="true" />
+            <property role="1HemKv" value="true" />
+            <node concept="3LXTmp" id="7T18c7FoRXU" role="1HemKq">
+              <node concept="398BVA" id="7T18c7FoRXC" role="3LXTmr">
+                <ref role="398BVh" node="PE3B26neqW" resolve="extensions.code" />
+                <node concept="2Ry0Ak" id="7T18c7FoRXD" role="iGT6I">
+                  <property role="2Ry0Am" value="languages" />
+                  <node concept="2Ry0Ak" id="7T18c7FoRXE" role="2Ry0An">
+                    <property role="2Ry0Am" value="de.itemis.model.merge.simple.demo.annotated" />
+                    <node concept="2Ry0Ak" id="7T18c7FoRXF" role="2Ry0An">
+                      <property role="2Ry0Am" value="generator" />
+                      <node concept="2Ry0Ak" id="7T18c7FoRXG" role="2Ry0An">
+                        <property role="2Ry0Am" value="templates" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3qWCbU" id="7T18c7FoRXV" role="3LXTna">
+                <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
       <node concept="1E1JtD" id="3aF8hCvy3sT" role="2G$12L">
         <property role="BnDLt" value="true" />
         <property role="TrG5h" value="de.itemis.model.merge.diamond" />
@@ -15572,6 +15640,11 @@
         <node concept="1SiIV0" id="6QQNrZIiQO" role="3bR37C">
           <node concept="3bR9La" id="6QQNrZIiQP" role="1SiIV1">
             <ref role="3bR37D" to="ffeo:7Kfy9QB6L9O" resolve="jetbrains.mps.lang.smodel" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7T18c7FoSlw" role="3bR37C">
+          <node concept="3bR9La" id="7T18c7FoSlx" role="1SiIV1">
+            <ref role="3bR37D" node="7T18c7FoROA" resolve="de.itemis.model.merge.simple.demo.annotated" />
           </node>
         </node>
       </node>
