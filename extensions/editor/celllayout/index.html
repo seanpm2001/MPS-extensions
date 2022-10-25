@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/editor/celllayout/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Cell Layout - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../all/">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../bl-extensions/structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../bl-extensions/blutil/">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li >
+    <a href="../grammar-cells/">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../richtext/">Richtext</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tables/">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets/">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../other/langvis/">Language Visualizer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/project-view/">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../bl-extensions/blutil/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../conditional-editor/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/editor/celllayout.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#cell-layout">Cell Layout</a></li>
+            <li class="second-level"><a href="#cells">Cells</a></li>
+                
+                <li class="third-level"><a href="#horizontal-line">horizontal-line</a></li>
+                <li class="third-level"><a href="#vertical-line">vertical-line</a></li>
+            <li class="second-level"><a href="#properties">Properties</a></li>
+                
+                <li class="third-level"><a href="#border">Border</a></li>
+                <li class="third-level"><a href="#gridlayout-properties">GridLayout properties</a></li>
+                <li class="third-level"><a href="#grow-and-push">Grow and Push</a></li>
+                <li class="third-level"><a href="#margin">Margin</a></li>
+            <li class="second-level"><a href="#celllayoutstyles">celllayout.styles</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="cell-layout">Cell Layout</h1>
+<p><strong>Language Namespace :</strong> <code>de.itemis.mps.editor.celllayout</code></p>
+<p>In the MPS layout algorithms, the children decide about their width and height, and the parent cell can only arrange the
+already layouted children. The algorithms from the celllayout language are similar to the ones from the swing layouters
+where the child is asked for its min/max/preferred size, but the parent decides about the size of the child and the child
+then has to fit itself into these bounds. The table and diagram language uses this language, but there are also some useful 
+styles defined in the <code>de.itemis.mps.celllayout</code> language. The language is partially inspired by the Java <a href="http://www.miglayout.com/">MigLayout</a> and uses a box model: there's a content box (the cell itself), a padding box (space between content and border), a border box and
+a margin box (the space around the border).</p>
+<p>The language also adds some new cells and style properties:</p>
+<h2 id="cells">Cells</h2>
+<h3 id="horizontal-line">horizontal-line</h3>
+<p>A horizontal line cell that has a specific thickness (width) and the parent cell's width. </p>
+<p>Supported style properties:</p>
+<ul>
+<li><strong>horizontal-line-color</strong> (default: <em>black</em>, type: <em>hex color, predefined color or custom query</em>)</li>
+<li><strong>horizontal-line-width</strong> (default: <em>1</em>, unit: <em>pixel</em>)</li>
+</ul>
+<h3 id="vertical-line">vertical-line</h3>
+<p>A vertical line cell that has a specific thickness (width) and the parent cell's height.</p>
+<p>Supported style properties:</p>
+<ul>
+<li><strong>vertical-line-color</strong> default: black, type: <em>hex color, predefined color or custom query</em></li>
+<li><strong>vertical-line-width</strong> default: <em>1</em>, unit: <em>pixel</em></li>
+</ul>
+<h2 id="properties">Properties</h2>
+<h3 id="border">Border</h3>
+<p>The additional properties are only applied if <em>draw-border</em> is <em>true</em>.</p>
+<p>Supported style properties:</p>
+<ul>
+<li><strong>border-color</strong> default: <em>light gray</em>, hex color, predefined color or custom query</li>
+<li><strong>border-size</strong> default: 0, unit: <em>pixel</em></li>
+</ul>
+<h3 id="gridlayout-properties">GridLayout properties</h3>
+<p>When a <em>vertical grid</em> layout is used as the cell layout, some additional properties are supported:</p>
+<ul>
+<li><strong>grid-layout-column-span</strong> is the number of columns that the cell spans</li>
+<li><strong>grid-layout-column-row</strong> is the number of rows that the cell spans</li>
+<li><strong>grid-layout-flatten</strong> is a boolean flag that tells the layouter that the grid should be flattened. Normally,
+ the MPS grid layout doesn't support aligning nested collections in vertical grids. When this property is set, the 
+ collections are first flattened before the alignment takes place.</li>
+<li><strong>vertical grid (with flatten support)</strong> a top-down cell layout with uses a grid layout</li>
+<li><strong>topDownLayout</strong> this layout replaces the MPS layouter. Sometimes problems with the integration into the MPS layouter occur
+ where you can use the <a href="http://127.0.0.1:63320/node?ref=r%3Abb8c05bc-4758-44fe-b1ab-f9faa5a73d31%28de.itemis.mps.editor.celllayout.structure%29%2F4159435463405238565">TopDownLayoutCell</a> as a workaround. Normally, the interceptor of the celllayout language is automatically
+installed recursively when any style property of the language is used.</li>
+</ul>
+<h3 id="grow-and-push">Grow and Push</h3>
+<ul>
+<li><strong>grow-x</strong> is a flag that tells the layouter to grow the cell to the with of the parent.</li>
+<li><strong>push-x</strong> is a property that has the same effect as setting <code>grow-x</code> on the cell and all ancestor cells.</li>
+<li><strong>grow-y</strong> is a flag that tells the layouter to grow the cell to the height of the parent.</li>
+<li><strong>push-y</strong> is a property that has the same effect as setting <code>grow-y</code> on the cell and all ancestor cells.</li>
+<li><strong>overflow-x/overflow-y</strong> the position of the line break in the Indent layout is determined by the width of the entire editor. This width is determined by the "Text width" setting (vertical gray line at the right margin) and the min/max size values of the cells. If, for example, a large image or a table with many columns is inserted, the entire editor becomes very wide and difficult to read. With overflow-x the width of a cell is ignored when determining the editor width. So the text breaks normally at the vertical line and does not become as wide as the image.</li>
+</ul>
+<h3 id="margin">Margin</h3>
+<p>It's possible to specify the space around the cell by specifying one of the margin properties.</p>
+<p>Supported style properties:</p>
+<ul>
+<li><strong>margin-left</strong> is the space to the left of the cell (unit: <em>pixel</em>)</li>
+<li><strong>margin-top</strong> is the space above the cell (unit: <em>pixel</em>)</li>
+<li><strong>margin-right</strong> is the space to the right of the cell (unit: <em>pixel</em>)</li>
+<li><strong>margin-bottom</strong> is the space below the cell (unit: <em>pixel</em>)</li>
+</ul>
+<h2 id="celllayoutstyles">celllayout.styles</h2>
+<p>For more control there are style properties in this language that support queries and allow, for example, to set the border
+size and color not only for the full border but also for a single side such as the left side. Import <a href="http://127.0.0.1:63320/node?ref=r%3A0b928dd6-dd7e-45a8-b309-a2e315b7877a%28de.itemis.mps.editor.celllayout.styles.editor%29%2F7943214583599513397">LayoutStyleAttributes</a>
+as a dependency. All style attributes start with an underline.</p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <!-- <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script> -->
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

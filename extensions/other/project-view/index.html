@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/other/project-view/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Project View - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../all/">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../bl-extensions/structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../bl-extensions/blutil/">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../editor/celllayout/">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/grammar-cells/">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/richtext/">Richtext</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/tables/">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/widgets/">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../langvis/">Language Visualizer</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../langvis/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../shadow-models/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/other/project-view.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#project-view">Project View</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="project-view">Project View</h1>
+<p><strong>Language Namespace :</strong> <code>com.mbeddr.mpsutil.projectview</code></p>
+<p>For many applications (and their end users), the default MPS Project Explorer (aka Logical View) is too complicated. 
+It shows too much "unnecessary" stuff. Also, depending on the use case and the stakeholder, the structure of the primary 
+navigation device must be different, adapted for the use case or stakeholder.</p>
+<p>The platform contains a DSL to describe the structure of arbitrary alternative tree views in the project explorer. MPS 
+already provides a drop-down menu to select from various views, and the DSL can contribute additional ones.</p>
+<p>The DSL supports the definition of arbitrary structures, labels, icons and actions and also lets you add additional nodes
+that are useful for structuring the tree. To see how this DSL works, checkout the custom views defined in <code>com.mbeddr.mpsutil.projectview.views</code> solution as well as the mbeddr favourites view in the com.mbeddr.mpsutil.favourites.plugin plugin solution.
+Below is a screenshot of that favourites view.</p>
+<p><img alt="favourites view" src="../../img/favourites.png" /></p>
+<p>The language must be used in a plugin solution and supports the following properties:</p>
+<ul>
+<li><strong>label</strong>: the name of the project view</li>
+<li><strong>icon</strong>: the icon that's displayed to the left of the label</li>
+<li><strong>priority</strong>: this value is used for sorting purposes of the project views. There are some predefined project views that 
+ have a priority (in IntelliJ terms: weight) that can't be used. The following IntelliJ/MPS project views exist: project view(prio: 0),
+ scope view (prio: 4), file view (prio: 5) (TODO: priorities). The standard priority for new custom views is 10000.
+ The language automatically increments the priority until
+ it can find an unused priority.</li>
+<li><strong>refresh on filesystem change</strong>: default: <em>true</em></li>
+<li><strong>refresh on make</strong>: default: <em>true</em></li>
+<li><strong>refresh on repository change</strong>: default: <em>true</em></li>
+<li><strong>refresh on class reload</strong>: default: <em>true</em></li>
+<li><strong>data provider</strong>: the keys of the data provider can be used as <a href="https://www.jetbrains.com/help/mps/plugin.html#enable/disableactioncontrol">context</a> parameters in actions.</li>
+<li><strong>toolbar action group ID</strong>: the ID of an existing action group</li>
+</ul>
+<p>The project view can also extend another view. The content of the preview has to implement the interface <code>IViewElement</code>.
+The default implementation is the <code>treeNode</code>. It can extend other elements and accepts the following parameters:</p>
+<ul>
+<li><strong>parent</strong>: the parent element in the project view</li>
+<li><strong>type</strong>: a type for the query. The result can be accessed through the variable that has the same name as
+ the tree nodes name.</li>
+<li><strong>load children lazy</strong>: default: <code>true</code></li>
+<li><strong>load children async</strong>: default: <code>false</code></li>
+<li><strong>auto update children</strong>: automatically update the child tree node when the parent changes</li>
+<li><strong>label</strong>: the text of the current node</li>
+<li><strong>icon</strong>: the icon that is displaced to the left of the label</li>
+<li><strong>text attributes</strong>: style attributes for the label such as bold, italic or a boder. The expression must return an instance 
+ of the class <a href="http://127.0.0.1:63320/node?ref=498d89d2-c2e9-11e2-ad49-6cf049e62fe5%2Fjava%3Acom.intellij.ui%28MPS.IDEA%2F%29%2F%7ESimpleTextAttributes">SimpleTextAttributes</a>.</li>
+<li><strong>action group ID</strong>: the ID of an existing action group that should be shown when right-clicking the node</li>
+<li><strong>folder path</strong>: the virtual folder of the node</li>
+<li><strong>folder action group ID</strong>: the ID of an existing action group that should be shown when right-click the virtual folder.</li>
+</ul>
+<p>The current mps project can be accessed through the variable <code>mpsProject</code>. a project view can be reference by typing <code>projectView</code>
+and the name of the project view.</p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <!-- <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script> -->
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

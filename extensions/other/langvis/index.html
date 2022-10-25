@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/other/langvis/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Language Visualizer - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../all/">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../bl-extensions/structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../bl-extensions/blutil/">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../editor/celllayout/">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/grammar-cells/">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/richtext/">Richtext</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/tables/">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/widgets/">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">Language Visualizer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../project-view/">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../generator/plaintext-gen/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../project-view/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/other/langvis.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#language-visualizer">Language Visualizer</a></li>
+            <li class="second-level"><a href="#installation">Installation</a></li>
+                
+                <li class="third-level"><a href="#install-plugin">Install plugin</a></li>
+                <li class="third-level"><a href="#build-the-plugin">Build the plugin</a></li>
+            <li class="second-level"><a href="#usage-of-the-plugin">Usage of the plugin</a></li>
+                
+                <li class="third-level"><a href="#optional-viewing-the-visualization-with-plantumls-auto-refreshing-viewer">(Optional) Viewing the visualization with PlantUML's auto-refreshing viewer</a></li>
+                <li class="third-level"><a href="#optional-viewing-the-visualization-with-your-favorite-image-viewer">(Optional) Viewing the visualization with your favorite image viewer</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="language-visualizer">Language Visualizer</h1>
+<p><strong>Language Namespace :</strong> <code>com.dslfoundry.langvis</code></p>
+<p>A JetBrains MPS plugin to visualize the structure of a language.</p>
+<p>The visualization shows in an integrated toolwindow, but the visualization can also viewed using an image viewer which refreshes on file change.</p>
+<p>Check the Readme for the current MPS version of mps-langvis on master. Other versions can be found in the <code>maintenance/</code> branches.</p>
+<p>An integrated tool window is shown when visualizing (parts of) a language.</p>
+<p>It was tested with Linux, Windows, and Mac.</p>
+<p><img alt="language visualizer" src="https://plugins.jetbrains.com/files/10689/screenshot_18062.png" width="800px" /> </p>
+<h2 id="installation">Installation</h2>
+<p>The following installation instructions assume an <code>apt-get</code> package manager on Linux and the Chocolatey package manager (<a href="https://chocolatey.org/">https://chocolatey.org/</a>) on Windows.</p>
+<p>Runtime prerequisites:</p>
+<ol>
+<li>Install the latest <a href="www.oracle.com/technetwork/java/javase">Oracle JDK</a>.</li>
+<li>Download PlantUML jar file from the <a href="http://plantuml.sourceforge.net/download.html">plantuml website</a> and store it into your home directory (<code>%HOME%</code> on Windows or <code>$HOME</code> on linux), for instance <code>/Users/mpsuser</code>.</li>
+<li>Install <a href="http://www.graphviz.org/">GraphViz</a> to satisfy the PlantUML dependency (e.g. <code>sudo apt-get install graphviz</code> or <code>choco install graphviz</code>)</li>
+<li>For Windows: make sure your <code>JAVA_HOME</code> environment variable points to your JDK (e.g. <code>set JAVA_HOME="c:\Program Files\Java\jdk-11.0.5"</code>)</li>
+<li>(Optional) If you prefer an alternative to the integrated panel or the PlantUML viewer, install the auto-refreshing image viewer of your choice (e.g. <code>sudo apt-get install eog</code> or <code>choco install irfanview</code>)</li>
+</ol>
+<p>Build prerequisites:</p>
+<ol>
+<li>Install above Runtime prerequisites</li>
+<li>Download and install ant (e.g. using <code>sudo apt-get install ant</code> or <code>choco install apache.ant</code>)</li>
+<li>Clone this git repository</li>
+</ol>
+<h3 id="install-plugin">Install plugin</h3>
+<p>Install the plugin from the <a href="https://plugins.jetbrains.com/plugin/10689-com-dslfoundry-langvis">JetBrains Marketplace</a>.</p>
+<h3 id="build-the-plugin">Build the plugin</h3>
+<ol>
+<li>
+<p>(Optional) regenerate the <code>build.xml</code> file</p>
+</li>
+<li>
+<p>Open the <code>mps-langstructvis</code> solution in MPS.</p>
+</li>
+<li>Adjust the <code>mps_home</code> path in the build solution</li>
+<li>
+<p>Rebuild all solutions (there should be a <code>build.xml</code> now in the top-level folder of the cloned repository)</p>
+</li>
+<li>
+<p>Run <code>ant</code> in the top-level folder the cloned repository</p>
+</li>
+<li>
+<p>For Windows, you would typically use the following command: <code>ant -Dmps_home="C:\Program Files (x86)\JetBrains\MPS 2021.1.4"</code></p>
+</li>
+<li>For Mac, you would typically use the following command: <code>ant -Dmps_home="/Applications/MPS 2021.1.4.app/Contents"</code></li>
+</ol>
+<p>In MPS, install the plugin:</p>
+<ol>
+<li>Select <code>File</code> -&gt; <code>Settings</code> -&gt; <code>Plugins</code> -&gt; <code>Install plugin from disk</code>.</li>
+<li>From the <code>build/artifacts/GenerateMetaModelDocumentation</code> subdirectory of the project select the zip file.</li>
+<li>Press <code>OK</code> and <code>Restart</code></li>
+</ol>
+<h2 id="usage-of-the-plugin">Usage of the plugin</h2>
+<p>You can create the following types of visualizations:</p>
+<ul>
+<li>Full structure of a language (right click <code>structure</code> of the language and select <code>Visualize Language Structure</code>) - hotkey: Ctrl+Shift+M</li>
+<li>Concept structure showing the children and inheritance hierarchy of a concept (Right-click concept and select <code>Visualize Concept Context</code>)</li>
+</ul>
+<p><img alt="context item: visualize language structure" src="https://plugins.jetbrains.com/files/10689/screenshot_18061.png" width="400px" /></p>
+<p>When visualizing the structure, a tool window automatically opens on the side.</p>
+<p>The tool window allows you to select the following options using check boxes:</p>
+<ul>
+<li><strong>Structure</strong> shows relations (lines) between children and descendants (the composition structure) of the concept.</li>
+<li><strong>Hierarchy</strong> shows concept extension and interface implementation/extension relations (the inheritance hierarchy) of the vizualized concepts.</li>
+<li><strong>Cardinality</strong> shows the cardinalities (e.g. <code>1</code>, <code>0..1</code>, <code>0..n</code>) of the visualized relations.</li>
+<li><strong>Role names</strong> show the names of the child/descendant next to the line.</li>
+<li><strong>Flatten namespaces</strong>: do not group items from the same namespace, but show fully qualified names of the items instead.</li>
+</ul>
+<p>After adjusting the options, you need to press the <code>refresh icon</code> to apply the changes.</p>
+<p>If the provided tool panel isn't to your liking, there are two alternative methods of viewing the visualizations.</p>
+<h3 id="optional-viewing-the-visualization-with-plantumls-auto-refreshing-viewer">(Optional) Viewing the visualization with PlantUML's auto-refreshing viewer</h3>
+<ol>
+<li>From your home directory start <code>java -jar ~/plantuml.jar</code>. This will monitor the home directory for plantuml files and generate png files.</li>
+<li>Double click on the <code>mps-metamodel.txt</code> file and you will have a picture that autorefreshes every time you call the visualizer in MPS.</li>
+</ol>
+<h3 id="optional-viewing-the-visualization-with-your-favorite-image-viewer">(Optional) Viewing the visualization with your favorite image viewer</h3>
+<ol>
+<li>Start your image viewer (e.g. <code>eog ~/mps-metamodel.png</code>)</li>
+<li>If your viewer automatically refreshes, you can leave it open and keep on creating visualizations.</li>
+</ol></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <!-- <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script> -->
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

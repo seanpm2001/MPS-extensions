@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/bl-extensions/blutil/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Base Language Util (blutil) - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../all/">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../editor/celllayout/">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/grammar-cells/">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/richtext/">Richtext</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/tables/">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../editor/widgets/">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../other/langvis/">Language Visualizer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/project-view/">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../structure-check/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../editor/celllayout/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/bl-extensions/blutil.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#base-language-util-blutil">Base Language Util (blutil)</a></li>
+            <li class="second-level"><a href="#blutil">blutil</a></li>
+                
+                <li class="third-level"><a href="#concept-switch">Concept Switch</a></li>
+                <li class="third-level"><a href="#dispatch">Dispatch</a></li>
+                <li class="third-level"><a href="#doc">Doc</a></li>
+                <li class="third-level"><a href="#log-deprecated">Log (deprecated)</a></li>
+                <li class="third-level"><a href="#match">Match</a></li>
+                <li class="third-level"><a href="#model-access">Model Access</a></li>
+                <li class="third-level"><a href="#profiler">Profiler</a></li>
+                <li class="third-level"><a href="#static-imports">Static imports</a></li>
+                <li class="third-level"><a href="#type-switch">Type switch</a></li>
+            <li class="second-level"><a href="#blutilgenutil">blutil.genutil</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="base-language-util-blutil">Base Language Util (blutil)</h1>
+<p>This package contains various Base Language related utility methods:</p>
+<h2 id="blutil">blutil</h2>
+<p><strong>Language Namespace:</strong> <code>com.mbeddr.mpsutil.blutil</code></p>
+<h3 id="concept-switch">Concept Switch</h3>
+<p>This Base Language statement checks the concept of a node in the form of a switch statement:</p>
+<pre><code>conceptswitch(node) { 
+  case AbstractConceptDeclaration : it [ ] =&gt; { 
+    return 10; 
+  } 
+  default =&gt; { 
+    return 5; 
+  } 
+}
+</code></pre>
+
+<p>When you have a case <em>X</em>, the variable <code>it</code> refers to the node as type <em>node&lt;X&gt;</em>. The declaration of the default
+case is mandatory.</p>
+<h3 id="dispatch">Dispatch</h3>
+<p>This expression is like <em>conceptswitch</em>. Additionally, it supports matching the children of a concept and calling 
+itself recursively with <code>#(expression)</code>:</p>
+<pre><code>public static int example() { 
+  node&lt;Expression&gt; node = &lt;10 + 20&gt;; 
+  dispatch&lt;int&gt; (node) { 
+    + [leftExpression :&lt;=: IntegerLiteral] ⇒  #(it.leftExpression) 
+    IntegerLiteral [] ⇒  1 
+    default 0 
+  }; 
+}                                                                                                                                                            
+</code></pre>
+
+<h3 id="doc">Doc</h3>
+<p><a href="http://127.0.0.1:63320/node?ref=63e0e566-5131-447e-90e3-12ea330e1a00%2Fr%3Af5bd2ad9-cd54-4408-b815-07f9f306f074%28com.mbeddr.mpsutil.blutil%2Fcom.mbeddr.mpsutil.blutil.structure%29%2F3693790620639876318">BlDoc</a> is a node annotation that adds support for adding documentation using 
+the richtext language. </p>
+<p><a href="http://127.0.0.1:63320/node?ref=63e0e566-5131-447e-90e3-12ea330e1a00%2Fr%3Af5bd2ad9-cd54-4408-b815-07f9f306f074%28com.mbeddr.mpsutil.blutil%2Fcom.mbeddr.mpsutil.blutil.structure%29%2F6451706574539345403">MethodLineDoc</a> is a node annotation that adds support for 
+single line text comments for classifier members. Example:</p>
+<pre><code>/** provides convenient access to the current environment as map&lt;&gt; **/                                      
+public map&lt;node&lt;&gt;, Object&gt; env { 
+  get { 
+    ((Map&lt;node&lt;&gt;, Object&gt;) context.getEnvironment()); 
+  } 
+
+}
+</code></pre>
+
+<h3 id="log-deprecated">Log (deprecated)</h3>
+<p>The two log statements <em>log</em> and <em>logctx</em> both print to the standard error stream with some support for labels and contexts.
+They're deprecated, use the official <a href="https://www.jetbrains.com/help/mps/logging.html">logging language</a> instead.</p>
+<h3 id="match">Match</h3>
+<p>The <code>when matched</code> statement is similar to the <a href="https://www.jetbrains.com/help/mps/pattern.html#lightpatterns">light patterns pattern builders</a>.
+It matches a candidate node against some clauses and executes the block if it matches. There's also an <code>otherwise</code> block
+that's executed when the nodes aren't matched:</p>
+<pre><code class="text">node&lt;PlusExpression&gt; plus = &lt;4 + 5&gt;;
+node&lt;&gt; l = null;
+node&lt;&gt; r = null;
+when matched plus against t /PlusExpression; {
+    l = t.leftExpression;
+    r = t.rightExpression;
+}
+</code></pre>
+
+<p>You can use a few different clauses:</p>
+<ul>
+<li><strong>t</strong>: match with the current node</li>
+<li><strong>p</strong>: match with the parent node</li>
+<li><strong>link</strong>: match with a child or reference node (link)</li>
+<li><strong>a</strong>: match with an ancestor node</li>
+</ul>
+<p>Normally, the <a href="https://www.jetbrains.com/help/mps/pattern.html">pattern language</a> should provide enough functionality, 
+so that you don't need this language.</p>
+<h3 id="model-access">Model Access</h3>
+<p>These concepts are safe read and write actions for the same concepts from the <a href="https://www.jetbrains.com/help/mps/smodel-language.html#accesslanguage">access language</a>.
+These two concepts don't swallow error messages but print them to the standard output stream.</p>
+<p><strong>Note</strong>: in some MPS versions, write access isn't enough to modify the model, a <em>command action</em> is needed in those cases.</p>
+<h3 id="profiler">Profiler</h3>
+<p>This is a simple java performance profiling statement, outputting the initial and final memory usage as well as the
+execution time of the statements (in milliseconds) to the standard output stream.</p>
+<h3 id="static-imports">Static imports</h3>
+<p>This is a special static method call that only shows the method name and not the class name of a static method, for example,
+<code>myMethod()</code> instead of <code>MyClass.myMethod()</code>.
+Enable it for a static method by using the intention <code>toggle static import view</code>.</p>
+<h3 id="type-switch">Type switch</h3>
+<p>This is another switch statement, this time for Java types. It supports matching types and giving them aliases.
+The default case is optional:</p>
+<pre><code>typeswitch (sourceScope) { 
+  case type StageScope as it { 
+    return findSiblings(it, engine); 
+  } 
+  case type NamedScope as it { 
+    return findSiblings(it, engine); 
+  } 
+  case type RootScope as it { 
+    return new sequence&lt;IScope&gt;(empty); 
+  } 
+  default { 
+    return new sequence&lt;IScope&gt;(empty); 
+  } 
+}
+</code></pre>
+
+<h2 id="blutilgenutil">blutil.genutil</h2>
+<p>This language contains helpful expressions for generators.</p>
+<ul>
+<li><strong>is-in-tests</strong> checks that the original input model is a node/editor test</li>
+<li><strong>executeOnce</strong> this expression is useful in reduction rules or similar rules to only execute the rule
+  once. The session object saves the necessary information.</li>
+<li><strong>mappingHasBeenExecuted</strong>: checks if <em>executeOnce</em> already set the flag. It can be used, for example, in a condition block
+ of a generator rule.</li>
+<li><strong>setMappingHasBeenExecuted</strong> is the same as <em>executeOnce</em> but only saves the information and doesn't check and returns
+if the code was already executed.</li>
+</ul></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <!-- <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script> -->
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

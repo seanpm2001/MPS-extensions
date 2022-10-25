@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/all/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Full Extension List - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../bl-extensions/structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li >
+    <a href="../bl-extensions/blutil/">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../editor/celllayout/">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/grammar-cells/">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/richtext/">Richtext</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/tables/">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../editor/widgets/">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../other/langvis/">Language Visualizer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../other/project-view/">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../other/shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../../adding/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../bl-extensions/structure-check/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/all.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#full-extension-list">Full Extension List</a></li>
+            <li class="second-level"><a href="#base-language-extensions">Base Language Extensions</a></li>
+                
+            <li class="second-level"><a href="#editor">Editor</a></li>
+                
+            <li class="second-level"><a href="#generator">Generator</a></li>
+                
+            <li class="second-level"><a href="#other">Other</a></li>
+                
+            <li class="second-level"><a href="#stubs">Stubs</a></li>
+                
+            <li class="second-level"><a href="#tools-views-and-other-plugins">Tools, Views and other Plugins</a></li>
+                
+            <li class="second-level"><a href="#utilities">Utilities</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="full-extension-list">Full Extension List</h1>
+<p>This is a full list of all the extensions that are contained in MPS-extensions.</p>
+<h2 id="base-language-extensions">Base Language Extensions</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>de.slisson.mps.structurecheck</td>
+<td>adds a statement to baselanguage that allows to check the structure of a node</td>
+</tr>
+<tr>
+<td>com.mbeddr.mpsutil.blutil</td>
+<td>utilities for baselanguage</td>
+</tr>
+<tr>
+<td>com.mbeddr.mpsutil.blutil.genutil</td>
+<td>baselanguage generator utilities</td>
+</tr>
+</tbody>
+</table>
+<h2 id="editor">Editor</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.mbeddr.mpsutil.editor.querylist</td>
+<td>enables the definition of editors over smodel queries as opposed to only a fixed concept structure</td>
+</tr>
+<tr>
+<td>com.mbeddr.mpsutil.treenotations</td>
+<td>tree-like notation for MPS Editors</td>
+</tr>
+<tr>
+<td>de.itemis.mps.editor.bool</td>
+<td>additional editor cells are available to represent Boolean values in the editor with a representation other than "true" and "false"</td>
+</tr>
+<tr>
+<td>de.itemis.mps.editor.collapsible</td>
+<td>additional editor cells that can be colllapsed</td>
+</tr>
+<tr>
+<td>de.itemis.mps.editor.diagram</td>
+<td>diagrammatic notation for MPS editors</td>
+</tr>
+<tr>
+<td>de.itemis.mps.editor.dropdown</td>
+<td>additional editor cells for displaying a dropdown menu</td>
+</tr>
+<tr>
+<td>de.itemis.mps.editor.enumeration</td>
+<td>additional editor cells for displaying a group of checkboxes as an enum</td>
+</tr>
+<tr>
+<td>de.itemis.mps.editor.math</td>
+<td>mathematical notation for MPS Editors</td>
+</tr>
+<tr>
+<td>de.itemis.mps.tooltips</td>
+<td>MPS editor extension to show tooltips at certain parts in the editor</td>
+</tr>
+<tr>
+<td>de.itemis.mps.celllayout</td>
+<td>celllayout extensions</td>
+</tr>
+<tr>
+<td>de.itemis.mps.grammarcells</td>
+<td>A grammar-like abstraction for writing editors for textual patterns such as flags, operations, parentheses, etc. Specifying a grammar cell is compact but has enough semantic richness to automatically generate actions (wrappers, side-transforms, substitutions, and delete actions) for the pattern you specified in the grammar cell.</td>
+</tr>
+<tr>
+<td>de.slisson.mps.conditionalEditor</td>
+<td>A conditional editor is almost like an aspect. It can be applied "around" existing editor, and whether it applies or not is determined by a condition and the applicable concept (similar to a pointcut in AO). Using this approach, it is now possible to essentially decorate any editor with any decoration based on arbitrary conditions.</td>
+</tr>
+<tr>
+<td>de.slisson.mps.editor.multiline</td>
+<td>an editor component for properties that supports wrapping of long lines and new lines by pressing ENTER</td>
+</tr>
+<tr>
+<td>de.slisson.mps.richtext</td>
+<td>an editor component for mixing plain text and MPS nodes</td>
+</tr>
+<tr>
+<td>de.slisson.mps.tables</td>
+<td>tabular notation for MPS editors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="generator">Generator</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.dslfoundry.plaintextflow</td>
+<td>improved version of plaintextgen</td>
+</tr>
+<tr>
+<td>com.dslfoundry.plaintextgen</td>
+<td>this plugin is an alternative text generator for MPS, using the standard model to model generation mechanisms (node macros, loop macros, property macros, etc.) to generate plain text, as opposed to MPS's programmatical textgens.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="other">Other</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>de.q60.mps.shadowmodels</td>
+<td>a shadow model is a non-editable model derived from existing models by model-to-model transformations.</td>
+</tr>
+<tr>
+<td>org.modelix.model</td>
+<td>alternative model API with better support for persistent data structures</td>
+</tr>
+</tbody>
+</table>
+<h2 id="stubs">Stubs</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.fasterxml.jackson</td>
+<td>jars and stubs for using Jackson json serialization</td>
+</tr>
+<tr>
+<td>org.apache.commons</td>
+<td>jars and their stubs to use Apache Commons Library in MPS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tools-views-and-other-plugins">Tools, Views and other Plugins</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.mbeddr.mpsutil.projectview</td>
+<td>abstraction on top of MPS lower-level API to create custom views in the view tool window (like logical view, file view, etc.)</td>
+</tr>
+<tr>
+<td>de.itemis.mps.selection</td>
+<td>with this plugin you can select nodes in MPS using the mouse. It also allows invoking intentions over a selection of nodes in an nlist</td>
+</tr>
+</tbody>
+</table>
+<h2 id="utilities">Utilities</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>com.mbeddr.mpsutil.intentions</td>
+<td>enables the grouping of different intentions under one label</td>
+</tr>
+<tr>
+<td>com.mbeddr.mpsutil.modellisteners</td>
+<td>Mechanism for installing callbacks that listen to changes in specific parts of models. Use only when you have no other MPS mechanism for achieving what you need, because many listeners can quickly eat performance.</td>
+</tr>
+<tr>
+<td>com.mbeddr.mpsutil.serializer</td>
+<td>helper classes that can serialize nodes to xml and deserialize them from xml</td>
+</tr>
+<tr>
+<td>de.slisson.mps.hacks</td>
+<td>various small extensions: editor utilities, generation plan extensions for better cross-model generation, reflection language (deprecated)</td>
+</tr>
+<tr>
+<td>de.itemis.mps.modelmerger</td>
+<td>extension that allows to merge models</td>
+</tr>
+<tr>
+<td>de.itemis.mps.nodeversioning</td>
+<td>The node versioning extension gives support for storing different states/versions of a node inside of the model</td>
+</tr>
+</tbody>
+</table></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <!-- <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script> -->
+    <script src="../../js/base.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

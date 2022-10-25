@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/editor/widgets/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Widgets - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../all/">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../bl-extensions/structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../bl-extensions/blutil/">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../celllayout/">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li >
+    <a href="../grammar-cells/">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../richtext/">Richtext</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tables/">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../other/langvis/">Language Visualizer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/project-view/">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../tree-notation/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../generator/plaintext-gen/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/editor/widgets.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#widgets">Widgets</a></li>
+            <li class="second-level"><a href="#bool">Bool</a></li>
+                
+            <li class="second-level"><a href="#collapsible">Collapsible</a></li>
+                
+            <li class="second-level"><a href="#dropdown">Dropdown</a></li>
+                
+            <li class="second-level"><a href="#enumeration">Enumeration</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="widgets">Widgets</h1>
+<h2 id="bool">Bool</h2>
+<p><strong>Language Namespace :</strong> <code>de.itemis.mps.editor.bool</code></p>
+<p>This language adds support for manipulating boolean values. When using the <code>checkbox</code> cell, the value can be toggled by clicking on
+the image. When using the <code>bool</code>cell, a custom text can be set and the values can be toggled by typing the 
+corresponding text or using the code completion menu.</p>
+<p><img alt="example: boolean cell" src="../../img/bool_cell_example.png" /></p>
+<h2 id="collapsible">Collapsible</h2>
+<p><strong>Language Namespace :</strong> <code>de.itemis.mps.editor.collapsible</code></p>
+<p>This language adds more folding functionality that the MPS collection cll folding mechanism doesn't offer.
+Two cells have to be added to the <code>collapsible</code> cell: the collapsed cell which is shown in the collapsed state and the expanded cell which
+is only shown when the cell isn't in the collapsed state. The following style properties can be set:</p>
+<ul>
+<li><strong>show collapsed always</strong>: always show the collapsed cell even when the cell is expanded (default: <em>true</em>)</li>
+<li><strong>collapsed by default</strong>: start in the collapsed state (default: <em>true</em>)</li>
+<li><strong>bracket line</strong>: draw brackets around the cell (default: <em>true</em>)</li>
+<li><strong>group</strong>: if multiple collapsible cells have the same group, edges are drawn between these cells.</li>
+<li><strong>node size</strong>: the size of the toggle button (unit: <em>pixel</em>)</li>
+<li><strong>paint node</strong>: a custom paint method for the toggle button</li>
+<li><strong>paint edge</strong>: a custom painted edge starting from the end of the line to the expanded cell</li>
+<li><strong>paint line</strong>: a custom painted line starting at the node and ending at the height of the full collapsible cell</li>
+</ul>
+<p><img alt="example: collapsible cell" src="../../img/collapsible_cell_example.png" /></p>
+<h2 id="dropdown">Dropdown</h2>
+<p><strong>Language Namespace :</strong> <code>de.itemis.mps.editor.dropdown</code></p>
+<p>A simple cell that makes a containing displays a cell as a dropdown menu: it surrounds a cell with a border and an icon 
+to the right side of it that opens the code completion menu.</p>
+<p><img alt="example: dropdown cell" src="../../img/dropdown_cell_example.png" width="600px" /></p>
+<h2 id="enumeration">Enumeration</h2>
+<p><strong>Language Namespace :</strong> <code>de.itemis.mps.editor.enumeration</code></p>
+<p>The cell <code>enum_checkbox</code> can be seen as an extension of the boolean language for more than two states. Select a enumeration
+property that should be used for the states of the checkbox. A quickfix automatically adds the enumeration values to the
+possible states section (if not: press F5 in the editor). Then an icon and the next state have to be declared. Declare the 
+icons by using the <code>IconCollection</code> concept. To avoid hard-coded paths, use path variables to set the path to the icon
+e.g. <code>${extensions.home}/code/widgets/languages/de.itemis.mps.editor.bool.demolang/icons/dialog-ok-3.png</code>. Set the scale of 
+the individual icons. The overall scaling of the checkbox icons can be influenced by setting the property <code>scale with editor font size</code>
+in the inspector.</p>
+<p><img alt="example: dropdown cell" src="../../img/enumeration_cell_example.png" width="800px" /></p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <!-- <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script> -->
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

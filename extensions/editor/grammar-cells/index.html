@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/editor/grammar-cells/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Grammar Cells - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../all/">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../bl-extensions/structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../bl-extensions/blutil/">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../celllayout/">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../richtext/">Richtext</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tables/">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets/">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../other/langvis/">Language Visualizer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/project-view/">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../diagrams/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../math/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/editor/grammar-cells.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#grammar-cells">Grammar Cells</a></li>
+            <li class="second-level"><a href="#grammarflag">grammar.flag</a></li>
+                
+                <li class="third-level"><a href="#supported-properties">Supported properties</a></li>
+            <li class="second-level"><a href="#grammarconstant">grammar.constant</a></li>
+                
+            <li class="second-level"><a href="#grammaroptional">grammar.optional</a></li>
+                
+                <li class="third-level"><a href="#supported-properties_1">Supported properties</a></li>
+            <li class="second-level"><a href="#grammarwrap">grammar.wrap</a></li>
+                
+                <li class="third-level"><a href="#supported-properties-side-transformations">Supported properties (side transformations)</a></li>
+                <li class="third-level"><a href="#supported-properties-node-substitution">Supported properties (node substitution)</a></li>
+            <li class="second-level"><a href="#grammarsubstitute">grammar.substitute</a></li>
+                
+                <li class="third-level"><a href="#supported-properties_2">Supported properties</a></li>
+            <li class="second-level"><a href="#grammarbrackets">grammar.brackets</a></li>
+                
+            <li class="second-level"><a href="#grammarrules">grammar.rules</a></li>
+                
+                <li class="third-level"><a href="#supported-properties_3">Supported properties</a></li>
+            <li class="second-level"><a href="#general-notes">General notes</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="grammar-cells">Grammar Cells</h1>
+<p><strong>Language Namespace :</strong> <code>com.mbeddr.mpsutil.grammarcells</code></p>
+<p>Grammar Cells are an alternative approach to the MPS transformation language for declaratively specifying
+textual notations and their interactions for the MPS editor:</p>
+<ul>
+<li><a href="http://voelter.de/data/pub/SLE2016-GrammarCells.pdf">paper</a></li>
+<li><a href="https://www.youtube.com/watch?v=GaUnwQGdmkc">video introduction</a></li>
+</ul>
+<p>The following editor cells are available:</p>
+<h2 id="grammarflag">grammar.flag</h2>
+<p>A cell that represents a boolean flag. It can be used for boolean properties.
+ The creation of the node is triggered when the matching text is entered (<em>substitution</em>). When the cursor is placed at the 
+ right position in the editor, the text can also be entered when the node already exists. In this cases, the text of the 
+ flag is shown in the editor and the boolean property is set (side transformation). The flag can be deleted with the normal
+MPS delete shortcuts.</p>
+<p><img alt="example: flag cell" src="../../img/flag_cell_example.png" width="600px" /></p>
+<h3 id="supported-properties">Supported properties</h3>
+<ul>
+<li><strong>text</strong>: the text to match</li>
+<li><strong>inverted</strong>: invert the semantic of the boolean flag (for example: entering the text changes the boolean flag to false)</li>
+<li><strong>substitute condition</strong>: activate substitutions only when a custom condition is met</li>
+<li><strong>side transform condition</strong>: activate side transformations only when a custom condition is met</li>
+<li><strong>do not generate node substitute action</strong>: disable the substitution action completely</li>
+<li><strong>description</strong>: the text that's shown in the code completion menu on the right side</li>
+</ul>
+<h2 id="grammarconstant">grammar.constant</h2>
+<p>A dynamic constant text: this cell supports displaying dynamic text similar to the read only model accessor.
+It's most popular use case is as the alias cell for the operator of an expression such as a binary expression.</p>
+<p><img alt="example: constant cell" src="../../img/constant_cell_example.png" width="800px" /></p>
+<h2 id="grammaroptional">grammar.optional</h2>
+<p>A cell that supports entering an optional text to add an optional containment link of a node such as
+ an optional child. The same way the grammar.flag cell works, node substitutions and side transformations are supported.</p>
+<h3 id="supported-properties_1">Supported properties</h3>
+<ul>
+<li><strong>transformation text</strong>: the text that must be matched. When the optional cell contains a collection cell, it's assumed
+  that the first cell is a constant cell and its text is used as the transformation text.</li>
+<li><strong>generate insert action</strong>: TODO</li>
+<li><strong>post process</strong>: a function that's executed after the invocation of the side transformation/node substitution.</li>
+<li><strong>description</strong>: a text that's shown in the code completion menu on the right side</li>
+</ul>
+<h2 id="grammarwrap">grammar.wrap</h2>
+<p>A cell that lets you enter a child in a context where a parent is expected (e.g. enter the type of a 
+ variable declaration to create the declaration itself). The editor cell of th child is wrapped and the instantiation of the
+ child is triggered. It can be used for containment links of children with mandatory (1) or optional (0..1) cardinality.</p>
+<h3 id="supported-properties-side-transformations">Supported properties (side transformations)</h3>
+<ul>
+<li><strong>condition</strong>: the trigger condition of the side transformation (default: <em>true</em>)</li>
+<li><strong>remove</strong>: a list of concepts where the side transformation should not be added</li>
+<li><strong>left text</strong>: the text of the left side transformation</li>
+<li><strong>right text</strong>: the text of the right side transformation</li>
+<li><strong>post process</strong>: a function that's executed after the invocation of the side transformation</li>
+</ul>
+<h3 id="supported-properties-node-substitution">Supported properties (node substitution)</h3>
+<ul>
+<li><strong>condition</strong>: the trigger condition of node substitution</li>
+<li><strong>focus wrapped</strong>: set the focus to the newly created node (default: false)</li>
+<li><strong>post process</strong>: a function that's executed after the invocation of the side transformation</li>
+<li><strong>description</strong>: the text that's shown in the code completion menu on the right side</li>
+</ul>
+<p><img alt="example: wrap cell" src="../../img/wrap_cell_example.png" width="600px" /></p>
+<h2 id="grammarsubstitute">grammar.substitute</h2>
+<p>a cell that surrounds a constant cell to support substitution of the underlying concept with
+ another one. When there's a need to customize the completion menu, use the cell <code>grammar.nodeSubstitution</code> instead. </p>
+<h3 id="supported-properties_2">Supported properties</h3>
+<ul>
+<li><strong>description</strong>: a text that's shown in the code completion menu on the right side</li>
+</ul>
+<p><img alt="example: substitute cell" src="../../img/substitute_cell_example.png" width="600px" /></p>
+<h2 id="grammarbrackets">grammar.brackets</h2>
+<p>A cell for implementing brackets such as braces or parenthesis. The opening and closing symbols
+must be provided. You can enter the opening symbol and then the closing symbol or vice versa to create a new instance of
+the concept that uses this cell e.g. 1+2<em>3 -&gt; (1+2</em>3 -&gt; (1+2*3). The PlusExpression is now surrounded by a ParenthesesExpression.</p>
+<p><img alt="example: brackets cell" src="../../img/brackets_cell_example.png" width="800px" /></p>
+<h2 id="grammarrules">grammar.rules</h2>
+<p>Grammar cells can be surrounded by these cells to handle <a href="https://en.wikibooks.org/wiki/Introduction_to_Programming_Languages/Precedence_and_Associativity">precedence and associativity</a>. Structural changes in the cell trigger 
+ linearization, parsing, and reshuffling of the AST (more info can be found in the paper). The contained cell structure will
+ be processed using the built-in parser. In the properties of this cell, the subconcept can be referenced by the 
+ variable with the same name.</p>
+<h3 id="supported-properties_3">Supported properties</h3>
+<ul>
+<li><strong>left associative</strong>: enable left associativity</li>
+<li><strong>priority</strong>: the precedence of this concept.</li>
+<li><strong>grammar.splittable</strong>: this cell wraps a child whose value can be split by typing specific characters. There
+ are builtin tokenizers for number literals and strings. Don't forget to define a property constraint. The tokenizer is
+ only invoked if the entered text isn't a valid property value. Example: <code>12</code> -&gt; type "+" between the two numbers -&gt; the node
+ gets transformed into a plus expression: <code>1 + 2</code>.</li>
+</ul>
+<p><img alt="example: rules cell" src="../../img/rules_cell_example.png" width="800px" /></p>
+<h2 id="general-notes">General notes</h2>
+<p>The side transformations are implemented with custom concept in this language: <code>grammar.sideTransform0</code>, <code>grammar.sideTransformation</code>,
+ <code>grammar.sideTransformation3</code>, and <code>SideTransformationCell4</code>. They can be used instead of the MPS transformation language 
+ when the provided cells don't handle a specific scenario.</p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <!-- <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script> -->
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>

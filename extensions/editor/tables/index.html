@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensions and utilities for MPS">  
+    <link rel="canonical" href="https://jetbrains.github.io/MPS-extensions/extensions/editor/tables/">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+    
+    <title>Tables - MPS Extensions</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-hack/3.003/css/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../../css/base.min.css" rel="stylesheet">
+    <link href="../../../css/cinder.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../css/highlight.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.28/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="../../..">MPS Extensions</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../building/">Building</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../contributing/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../Migrating/">Migrating</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../../adding/">Adding</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extensions <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../all/">Full Extension List</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Base Language Extensions</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../bl-extensions/structure-check/">Structure Check</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../bl-extensions/blutil/">Base Language Util (blutil)</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Editor</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../celllayout/">Cell Layout</a>
+</li>
+
+        
+            
+<li >
+    <a href="../conditional-editor/">Conditional Editor</a>
+</li>
+
+        
+            
+<li >
+    <a href="../diagrams/">Diagrams</a>
+</li>
+
+        
+            
+<li >
+    <a href="../grammar-cells/">Grammar Cells</a>
+</li>
+
+        
+            
+<li >
+    <a href="../math/">Math</a>
+</li>
+
+        
+            
+<li >
+    <a href="../mouse-selection/">Intentions for custom selections</a>
+</li>
+
+        
+            
+<li >
+    <a href="../multiline/">Multiline</a>
+</li>
+
+        
+            
+<li >
+    <a href="../querylist/">Query List</a>
+</li>
+
+        
+            
+<li >
+    <a href="../richtext/">Richtext</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">Tables</a>
+</li>
+
+        
+            
+<li >
+    <a href="../tree-notation/">Tree Notation</a>
+</li>
+
+        
+            
+<li >
+    <a href="../widgets/">Widgets</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Generator</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../generator/plaintext-gen/">Plaintext Generator</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Other</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../other/langvis/">Language Visualizer</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/project-view/">Project View</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../other/shadow-models/">Shadow Models</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+<li >
+    <a href="../../stubs/">Stubs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Utilities</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../utils/intentions-menu/">Intentions Menu</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-listener/">Model Listener</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/hacks/">Hacks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/model-merger/">Model Merger</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/node-versioning/">Node Versioning</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../utils/serializer/">Serializer</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../richtext/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../tree-notation/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jetbrains/mps-extensions/edit/master/docs/extensions/editor/tables.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#tables">Tables</a></li>
+            <li class="second-level"><a href="#supported-properties">Supported properties</a></li>
+                
+            <li class="second-level"><a href="#cell">Cell</a></li>
+                
+            <li class="second-level"><a href="#horizontal-and-vertical">Horizontal and Vertical</a></li>
+                
+            <li class="second-level"><a href="#query">Query</a></li>
+                
+                <li class="third-level"><a href="#supported-parameters">Supported parameters</a></li>
+            <li class="second-level"><a href="#grid-query">Grid query</a></li>
+                
+            <li class="second-level"><a href="#header">Header</a></li>
+                
+            <li class="second-level"><a href="#patterns">Patterns</a></li>
+                
+            <li class="second-level"><a href="#alternatives">Alternatives</a></li>
+                
+            <li class="second-level"><a href="#blog-posts">Blog posts</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="tables">Tables</h1>
+<p><strong>Language Namespace :</strong> <code>de.slisson.mps.tables</code></p>
+<p>As the name already implies, this cell adds support for tables. The table is internally represented with objects of the
+interface <a href="http://127.0.0.1:63320/node?ref=r%3Aea653f2d-c829-4182-b311-a544ef1f4c1f%28de.slisson.mps.tables.runtime.gridmodel%29%2F1000503696468615635">ITableGrid</a>. The supported contents of the cell are explained in the following sections. The table
+doesn't have to be declared in the editor of one single concept: the declaration of vertical or horizontal rows can also
+be done in other editors by using the <code>partial table</code> cell.</p>
+<p><img alt="example: table" src="../../img/table_cell_example.png" width="800px" /></p>
+<h2 id="supported-properties">Supported properties</h2>
+<ul>
+<li><strong>header alignment disabled</strong>: don't align the headers with the rest of the table</li>
+<li><strong>grid post processor</strong>: a function that's invoked after the editor cells of this language were created. It can be used,
+ for example, to set some additional cells, or add some dynamic row or column headers.</li>
+<li><strong>disable left row end cells</strong>: there's a special cell to the left of table rows that's used, for example, for inserting
+ new table rows. This flag can disable this cell (default: <em>false</em>).</li>
+<li><strong>disable right row end cells</strong>: there's a special cell to the left of table rows that's used, for example, for inserting
+    new table rows. This flag can disable this cell (default: *false).</li>
+</ul>
+<h2 id="cell">Cell</h2>
+<p>A cell is the smallest unit of a table. It contains the content and can contain a column (<code>c&lt;&gt;</code>) or row header (<code>r&lt;&gt;</code>).
+The <code>show if</code> property in the inspector can be used to tie the visibility of the cell to a condition.</p>
+<h2 id="horizontal-and-vertical">Horizontal and Vertical</h2>
+<p>The <code>horizontal%</code>/<code>vertical%</code> cell can be used to display children in the editor. The link declaration must be set.
+The row and column headers can also be set. To specify the horizontal/vertical content in a dynamic way, use the cell <code>horizontal</code>/<code>vertical</code>.
+They support the same content as the table cell itself.</p>
+<h2 id="query">Query</h2>
+<p>A table cell query is the easiest way to create a full table.</p>
+<h3 id="supported-parameters">Supported parameters</h3>
+<ul>
+<li><strong>shared variables</strong>: variables that can be accessed by the other parameters</li>
+<li><strong>initialize</strong>: a function that initialized the shared variables or other code</li>
+<li><strong>column count</strong>: the number of columns to display</li>
+<li><strong>row count</strong>: the number of rows to display</li>
+<li><strong>cell</strong>: a function that creates the cell itself. Cells can be created automatically by providing a node or a string 
+ property. The cell or a list of cells can also be created by creating an instance of one of the <code>EditorCell</code> classes.
+If you want to create a cell dynamically and want to use the normal editors for creating editor, you can invoke the method
+ <code>editorContext.createCell</code> which takes a node as a parameter and a suitable editor declaration for the provided node.
+ At the end, the type of collection must be specified (vertical list/cells, horizontal list/cells).</li>
+<li><strong>substitute node</strong>: the concept or a link declaration can be selected for the substitution menu. The function must perform
+ the substitution itself e.g. replacing an old node in the table with the new node.</li>
+<li><strong>can create</strong>: a query that specifies if the cell at the column and row index can be created. Alternatively, only a row or column
+ can be allowed to be created.</li>
+<li><strong>column header</strong>: a query for creating the column headers</li>
+<li><strong>row header</strong>: a query for creating the row headers</li>
+</ul>
+<h2 id="grid-query">Grid query</h2>
+<p>The grid query is an even lower level form of declaration a table. It works by setting the cells directely in the grid
+object of type <code>ITableGrid</code>. There are various set methods that can be used to create the table such as <code>grid.setCell()</code>
+ or <code>grid.setColumnHeader</code>. To support code completion, the substitution info must be set by calling <code>grid.setSubstituteInfo</code>
+for every cell by using its column and row index as a substitute info node as parameters. The substitute info node can
+be created manually or by using one of the methods of the <code>substituteInfoFactory</code> method (e.g. forChild() or forEmptyList()).</p>
+<h2 id="header">Header</h2>
+<p>The header cells can also be created in different ways:</p>
+<ul>
+<li><strong>"</strong>: a constant text</li>
+<li><strong>#</strong>: a reference to an existing header node </li>
+<li><strong>[</strong>: an editor cell</li>
+<li><strong>{</strong>: a list of header nodes</li>
+<li><strong>query</strong>: this option gives the most flexibility. The headers can be created the same way as in the table cell query.</li>
+</ul>
+<h2 id="patterns">Patterns</h2>
+<p>As can be seen in the previous description, there are many ways to create tables. This section shows some common ways to
+achieve it:</p>
+<p><strong>Variant 1</strong>: one editor for a table with rows (vertical), columns (horizontal) + query for selecting the nodes for the cells.</p>
+<pre><code class="text">table {
+    vertical c&lt;query{}&gt; {
+        horizontal r&lt;query{} &gt; {
+            query {}
+        }
+    }
+}
+</code></pre>
+
+<p>The queried node contains a partial table:</p>
+<pre><code class="text">partial table {
+ cell c&lt;&gt; r&lt;&gt;
+}
+</code></pre>
+
+<p><strong>Variant 2</strong>: one editor for a table with rows</p>
+<pre><code class="text">table {
+    vertical% r&lt;&gt; c&lt;&gt;
+}
+</code></pre>
+
+<p>The row itself contains a partial table that creates the columns with special cells for the column headers. The first column
+is created using a table-cell cell, the others using a grid query.</p>
+<pre><code class="text">partial table {
+  cell {name} c&lt;ID&gt; r&lt;&gt;
+  gridquery {}
+
+}
+</code></pre>
+
+<p><strong>Variant 3</strong>: one editor for a table with column headers</p>
+<pre><code class="text">table {
+    column headers { ... }
+    cells:
+        vertical%rows r&lt;&gt; c&lt;&gt;
+}
+</code></pre>
+
+<p>There's a specific concept for rows with the following editor:</p>
+<pre><code class="text">partial table {
+    horizontal r&lt;&gt; {
+        cell {name}
+        query {
+
+        } 
+    }
+}
+</code></pre>
+
+<p>For the cell there is also an extra node which just holds the content itself:</p>
+<pre><code>[&gt; % value % &lt;]
+</code></pre>
+
+<p><strong>Variant 4</strong>: a completely dynamically created table using grid query</p>
+<pre><code class="text">table {
+    gridquery {}
+}
+</code></pre>
+
+<h2 id="alternatives">Alternatives</h2>
+<p>For simple instances, you might consider using a MPS collection with a <code>vertical</code> grid layout instead. It has a much better performance
+and can be easier to use.</p>
+<h2 id="blog-posts">Blog posts</h2>
+<ul>
+<li><a href="https://tomassetti.me/tabular-projections-in-jetbrains-mps-lets-start-building-an-accounting-system">Tabular projections in Jetbrains MPS: let’s start building an accounting system | strumenta.com</a></li>
+<li><a href="https://dslfoundry.com/using-the-diagram-editor-and-querylist-lets-build-a-graphical-structure-editor-for-mps/">Using the diagram editor and querylist: let’s build a graphical structure editor for MPS | dslgroundry.com</a></li>
+</ul></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+        
+        
+    </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../../..';
+    </script>
+    <!-- <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script> -->
+    <script src="../../../js/base.js"></script>
+    <script src="../../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
